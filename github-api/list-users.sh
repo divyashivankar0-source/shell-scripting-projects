@@ -1,5 +1,12 @@
 #!/bin/bash
+#################
+# About:
+# Input:
+# Owner:
+#
+#################
 
+helper
 # GitHub API URL
 API_URL="https://api.github.com"
 
@@ -34,6 +41,12 @@ function list_users_with_read_access {
         echo "Users with read access to ${REPO_OWNER}/${REPO_NAME}:"
         echo "$collaborators"
     fi
+}
+
+function helper {
+expectedcmd_args=2
+    if [ $# -ne expectedcmd_args ]; then
+        echo "Please execute the scripts with required cmd args"
 }
 
 # Main script
